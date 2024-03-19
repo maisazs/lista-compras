@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/4d4ced11e8.js" crossorigin="anonymous"></script>
+
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header>
+        <img src="img/header.png" alt="Banner header">
+    </header>
+
+    <main>
+        <h1>Lista de Compras</h1>
+
+        <form action="#" method="post" id="entrada-dados" autocomplete="off">
+            <p class="item">
+                <label for="iitem">Item</label>
+                <input type="text" name="item" id="iitem">
+            </p>
+            <p class="qnt">
+                <label for="iqnt">Quantidade</label>
+                <input type="number" name="qnt" id="iqnt">
+            </p>
+            <p class="categ">
+                <label for="icateg">Categoria</label>
+                <select name="categ" id="icateg">
+                    <option  value="" selected>-- Escolha --</option>
+                    <option value="padaria">padaria</option>
+                    <option value="legume">legume</option>
+                    <option value="carne">carne</option>
+                    <option value="fruta">fruta</option>
+                    <option value="bebida">bebida</option>
+                </select>
+            </p>
+            <button type="submit" class="add"><i class="fa-solid fa-plus"></i></button>
+        </form>
+
+        <form action="#" method="post" >
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="maca" id="imaca">
+                    <label for="imaca">
+                        <h3>Maça</h3>
+                        <h4>Quantidade: 2</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div><i class="fa-regular fa-lemon"></i> fruta</div>
+                    <div class="opt fechado">
+                        <button>editar</button>
+                        <button>excluir</button>
+                    </div>
+                    <button onclick="abrirOpt()"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="pao" id="ipao">
+                    <label for="ipao">
+                        <h3>Pão Francês</h3>
+                        <h4>Quantidade: 4</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div class="padaria"><i class="fa-solid fa-bread-slice"></i> padaria</div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="brocolis" id="ibrocolis">
+                    <label for="ibrocolis">
+                        <h3>Brócolis</h3>
+                        <h4>Quantidade: 1</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div class="legume"><i class="fa-solid fa-carrot"></i> legume</div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="leite" id="ileite">
+                    <label for="ileite">
+                        <h3>Leite</h3>
+                        <h4>Quantidade: 2</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div class="bebida"><i class="fa-solid fa-bottle-water"></i> bebida</div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="frango" id="ifrango">
+                    <label for="ifrango">
+                        <h3>Peito de Frango</h3>
+                        <h4>Quantidade: 2</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div class="carne"><i class="fa-solid fa-drumstick-bite"></i> carne</div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+
+            <div class="lista-itens">
+                <div class="item-check">
+                    <input type="checkbox" name="mamao" id="imamao">
+                    <label for="imamao">
+                        <h3>Mamão</h3>
+                        <h4>Quantidade: 1</h4>
+                    </label>
+                </div>
+                <label for="imaca" class="item-opt">
+                    <div><i class="fa-regular fa-lemon"></i> fruta</div>
+                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                </label>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

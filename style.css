@@ -1,0 +1,226 @@
+@import 'colors.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter Tight", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    background-color: var(--gray-600);
+}
+
+header {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+header img {
+    display: flex;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    margin: auto;
+    margin-top: -95px;
+}
+
+main h1 {
+    color: var(--gray-100);
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 100%;
+    letter-spacing: 3%;
+}
+
+form#entrada-dados {
+    display: flex;
+    color: var(--gray-100);
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.item, .qnt, .categ {
+    display: flex;
+    flex-direction: column;
+    color: var(--gray-200);
+    font-size: 15px;
+    line-height: 100%;
+    margin-top: 20px;
+}
+
+.item input, .qnt input, .categ #icateg{
+    margin-top: 10px;
+    background-color: var(--gray-500);
+    border: 1px solid var(--gray-300);
+    border-radius: 6px;
+    padding: 12px;
+    color: var(--gray-200);
+    font-size: 15px;
+}
+
+.item input{
+    width: 302px;
+}
+
+.qnt input {
+    width: 70px;
+}
+
+.categ #icateg {
+    width: 144px;
+}
+
+
+button.add {
+    cursor: pointer;
+    border: none;
+    background-color: var(--purple);
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+button.add:hover {
+    background-color: var(--purple-dark);
+}
+
+button.add i {
+    font-size: 20px;
+    font-weight: 100;
+    color: var(--gray-100);
+}
+
+div.lista-itens {
+    display: flex;
+    background-color: var(--gray-400);
+    justify-content: space-between;
+    align-items: center;
+    width: 720px;
+    height: 68px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+div.lista-itens:first-child {
+    margin-top: 40px;
+}
+
+div.item-check {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+div.item-check input {
+    margin-left: 20px;
+}
+
+div.item-check label h3 {
+    color: var(--gray-100);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 130%;
+}
+
+div.item-check label h4 {
+    color: var(--gray-200);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+label.item-opt {
+    display: flex;
+    gap: 20px;
+}
+
+label.item-opt div {
+    color: var(--orange);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--orange-dark);
+    width: 83px;
+    height: 32px;
+    border-radius: 999px;
+}
+
+label.item-opt div.opt {
+    background-color: var(--gray-300);
+    width: 120px;
+}
+
+label.item-opt div.aberto {
+    display: flex;
+}
+
+label.item-opt div.fechado {
+    display: none;
+}
+
+label.item-opt div.opt button {
+    color: var(--gray-100);
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0;
+}
+
+label.item-opt button {
+    background-color: transparent;
+    border: none;
+    color: var(--purple);
+    font-size: 20px;
+    font-weight: 100;
+    margin-right: 20px;
+}
+
+label.item-opt div.padaria {
+    color: var(--yellow);
+    background-color: var(--yellow-dark);
+    width: 98px;
+}
+
+label.item-opt div.legume {
+    color: var(--green);
+    background-color: var(--green-dark);
+    width: 97px;
+}
+
+label.item-opt div.bebida {
+    color: var(--blue);
+    background-color: var(--blue-dark);
+    width: 94px;
+}
+
+label.item-opt div.carne {
+    color: var(--pink);
+    background-color: var(--pink-dark);
+    width: 87px;
+}
+
+@media screen and (max-width: 760px) {
+    main {
+        max-width: 350px;
+    }
+
+    form#entrada-dados {
+        flex-wrap: wrap;
+    }
+
+    div.lista-itens {
+        width: 350px;
+    }
+}
