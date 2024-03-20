@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: "Inter Tight", sans-serif;
+    transition: 0.5s;
 }
 
 button {
@@ -104,6 +105,7 @@ div.lista-itens {
     display: flex;
     background-color: var(--gray-400);
     justify-content: space-between;
+    gap: 10px;
     align-items: center;
     width: 720px;
     height: 68px;
@@ -142,6 +144,7 @@ div.item-check label h4 {
 
 label.item-opt {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
@@ -160,7 +163,18 @@ label.item-opt div {
 
 label.item-opt div.opt {
     background-color: var(--gray-300);
-    width: 120px;
+    width: auto;
+    gap: 0px;
+    justify-content: space-between;
+}
+
+div.opt button.editar, div.opt button.excluir {
+    padding-inline: 13px;
+}
+
+button.editar:hover, button.excluir:hover {
+    background-color: var(--gray-500);
+    border-radius: 999px;
 }
 
 label.item-opt div.aberto {
@@ -185,6 +199,7 @@ label.item-opt button {
     font-size: 20px;
     font-weight: 100;
     margin-right: 20px;
+    padding: 8px;
 }
 
 label.item-opt div.padaria {
@@ -209,6 +224,14 @@ label.item-opt div.carne {
     color: var(--pink);
     background-color: var(--pink-dark);
     width: 87px;
+}
+
+.fechado {
+    display: none;
+}
+
+.aberto {
+    display: flex;
 }
 
 @media screen and (max-width: 760px) {

@@ -25,7 +25,7 @@
             </p>
             <p class="qnt">
                 <label for="iqnt">Quantidade</label>
-                <input type="number" name="qnt" id="iqnt">
+                <input type="number" name="qnt" id="iqnt" min="1">
             </p>
             <p class="categ">
                 <label for="icateg">Categoria</label>
@@ -41,7 +41,6 @@
             <button type="submit" class="add"><i class="fa-solid fa-plus"></i></button>
         </form>
 
-        <form action="#" method="post" >
             <div class="lista-itens">
                 <div class="item-check">
                     <input type="checkbox" name="maca" id="imaca">
@@ -51,12 +50,12 @@
                     </label>
                 </div>
                 <label for="imaca" class="item-opt">
-                    <div><i class="fa-regular fa-lemon"></i> fruta</div>
-                    <div class="opt fechado">
-                        <button>editar</button>
-                        <button>excluir</button>
+                    <div id="it1"><i class="fa-regular fa-lemon"></i> fruta</div>
+                    <div class="opt fechado" id="maca">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
                     </div>
-                    <button onclick="abrirOpt()"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <button onclick="abrirOpt(document.getElementById('maca'), document.getElementById('it1'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
 
@@ -68,9 +67,13 @@
                         <h4>Quantidade: 4</h4>
                     </label>
                 </div>
-                <label for="imaca" class="item-opt">
-                    <div class="padaria"><i class="fa-solid fa-bread-slice"></i> padaria</div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <label for="ipao" class="item-opt">
+                    <div class="padaria" id="it2"><i class="fa-solid fa-bread-slice"></i> padaria</div>
+                    <div class="opt fechado" id="pao">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
+                    </div>
+                    <button onclick="abrirOpt(document.getElementById('pao'), document.getElementById('it2'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
 
@@ -82,9 +85,13 @@
                         <h4>Quantidade: 1</h4>
                     </label>
                 </div>
-                <label for="imaca" class="item-opt">
-                    <div class="legume"><i class="fa-solid fa-carrot"></i> legume</div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <label for="ibrocolis" class="item-opt">
+                    <div class="legume" id="it3"><i class="fa-solid fa-carrot"></i> legume</div>
+                    <div class="opt fechado" id="brocolis">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
+                    </div>
+                    <button onclick="abrirOpt(document.getElementById('brocolis'), document.getElementById('it3'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
 
@@ -96,9 +103,13 @@
                         <h4>Quantidade: 2</h4>
                     </label>
                 </div>
-                <label for="imaca" class="item-opt">
-                    <div class="bebida"><i class="fa-solid fa-bottle-water"></i> bebida</div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <label for="ileite" class="item-opt">
+                    <div class="bebida" id="it4"><i class="fa-solid fa-bottle-water"></i> bebida</div>
+                    <div class="opt fechado" id="leite">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
+                    </div>
+                    <button onclick="abrirOpt(document.getElementById('leite'), document.getElementById('it4'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
 
@@ -110,9 +121,13 @@
                         <h4>Quantidade: 2</h4>
                     </label>
                 </div>
-                <label for="imaca" class="item-opt">
-                    <div class="carne"><i class="fa-solid fa-drumstick-bite"></i> carne</div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <label for="ifrango" class="item-opt">
+                    <div class="carne" id="it5"><i class="fa-solid fa-drumstick-bite"></i> carne</div>
+                    <div class="opt fechado" id="frango">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
+                    </div>
+                    <button onclick="abrirOpt(document.getElementById('frango'), document.getElementById('it5'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
 
@@ -123,13 +138,17 @@
                         <h3>Mamão</h3>
                         <h4>Quantidade: 1</h4>
                     </label>
+                    
                 </div>
-                <label for="imaca" class="item-opt">
-                    <div><i class="fa-regular fa-lemon"></i> fruta</div>
-                    <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <label for="imammao" class="item-opt">
+                    <div id="it6"><i class="fa-regular fa-lemon"></i> fruta</div>
+                    <div class="opt fechado" id="mamao">
+                        <button class="editar">editar</button>
+                        <button class="excluir">excluir</button>
+                    </div>
+                    <button onclick="abrirOpt(document.getElementById('mamao'), document.getElementById('it6'))"><i class="fa-solid fa-ellipsis-vertical"></i></button>
                 </label>
             </div>
-        </form>
     </main>
 
     <script src="script.js"></script>
